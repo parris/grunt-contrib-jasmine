@@ -233,8 +233,6 @@ module.exports = function(grunt) {
     });
 
     phantomjs.on('jasmine.suiteDone', function(suiteMetaData) {
-      suites[suiteMetaData.id].time = suiteMetaData.duration / 1000;
-
       if(indentLevel > 1) {
         indentLevel--;
       }
